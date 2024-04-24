@@ -1,0 +1,86 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.wrapper > * {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.collapsible {
+    max-width: 600px;
+    overflow: hidden;
+    font-weight: 500;
+}
+
+.collapsible input {
+    display: none;
+}
+
+.collapsible label {
+    position: relative;
+    font-weight: 600;
+    box-shadow: 0 5px 12px 0 rgba(0, 0, 0, .1), o 4px 12px 0 rgba(0, 0, 0, .08);
+    display: block;
+    margin-bottom: 10px;
+    color: #a7a7a7;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.collapsible label::after{
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    background: url(../images/icon-arrow.svg) no-repeat 0 0;
+    background-color: white;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+
+.collapsible input:checked + label::after {
+    transform: rotate(90deg);
+    transition: all 0.5s ease;
+}
+
+.collapsible-text {
+    max-height: 1px;
+    overflow: hidden;
+    border-radius: 4px;
+    line-height: 1.4;
+    position: relative;
+    color: aliceblue;
+    top: -100%;
+    opacity: 0.5;
+    transition: all 0.5s ease;
+}
+
+
+.collapsible input:checked ~ .collapsible-text {
+    max-height: 600px;
+    padding-bottom: 25px;
+    box-shadow: 0 5px 12px 0 rgba(0, 0, 0, .1), o 4px 12px 0 rgba(0, 0, 0, .08);
+    opacity: 1;
+    top: 0;
+}
+
+.collapsible-text h2 {
+    margin-bottom: 10px;
+    padding: 15px 15px 0;
+    color:black;
+}
+
+.collapsible-text p {
+    padding-left: 15px;
+    padding-right: 15px;
+}

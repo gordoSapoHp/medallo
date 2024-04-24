@@ -1,0 +1,12 @@
+.custom-gallery .image-gallery-slide {
+    transition: opacity 0.5s ease-in-out; /* Define la transición de opacidad */
+  }
+  
+  .custom-gallery .image-gallery-slide.current {
+    opacity: 1; /* Asegúrate de que la imagen actual esté completamente visible */
+  }
+  
+  .custom-gallery .image-gallery-slide.previous {
+    opacity: 0; /* Haz que la imagen anterior se desvanezca */
+  }
+  

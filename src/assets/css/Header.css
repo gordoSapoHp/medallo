@@ -1,0 +1,21 @@
+#logo {
+    transition: all 0.8s ease; /* Animación de transición para suavizar el cambio de tamaño */
+  }
+
+span {
+  font-size: 14px;
+}
+.navbar-scroll {
+  height: auto; /* Altura reducida */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+  transition: all 2s ease; /* Animación de transición para suavizar el cambio */
+}
+
+.nav-title {
+    font-size: 17px;
+}
+
+.my-list {
+    z-index: -100;
+}
+
